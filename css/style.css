@@ -1,0 +1,104 @@
+/* Variables y reseteo general */
+:root {
+    --bg-color: #050505;
+    --surface-dark: #121212;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+}
+
+.font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Ocultar secciones del SPA */
+.hidden {
+    display: none !important;
+}
+
+/* Estilos de las tarjetas (Cards) */
+.tech-card {
+    background-color: var(--surface-dark) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border-color: #666 !important;
+}
+
+/* Efecto imagen en escala de grises */
+.img-grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    background-color: #222;
+}
+
+.tech-card:hover .img-grayscale {
+    filter: grayscale(0%);
+}
+
+.img-detail {
+    filter: grayscale(100%);
+    width: 100%;
+    border: 1px solid #333;
+}
+
+/* Custom inputs oscuros de Bootstrap */
+.form-control:focus, .form-select:focus {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+/* Item del carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #333;
+}
+
+/* Carrusel Horizontal Moderno (Scroll Snap) */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border: 1px solid #333;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 0;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+.horizontal-scroll .card-wrapper {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+}
